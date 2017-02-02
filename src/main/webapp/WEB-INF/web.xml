@@ -1,22 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
- 
 <!-- This is Web Application Deployment Descriptor -->
 <web-app xmlns="http://java.sun.com/xml/ns/j2ee" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
     version="2.4">
+    
 	<display-name>Meet@</display-name>
 
-	<welcome-file-list>
+	<!-- <welcome-file-list>
 		<welcome-file>/WEB-INF/jsp/home.jsp</welcome-file>
-	</welcome-file-list>
+	</welcome-file-list> -->
  
 	<servlet>
 		<servlet-name>mvc-dispatcher</servlet-name>
 		<servlet-class>
 			org.springframework.web.servlet.DispatcherServlet
 		</servlet-class>
-		<load-on-startup>1</load-on-startup>
 	</servlet>
 
 	<servlet-mapping>
@@ -24,12 +22,27 @@
 		<url-pattern>/</url-pattern>
 	</servlet-mapping>
 
+	<listener>
+	    <listener-class>
+	        org.springframework.web.context.ContextLoaderListener
+	    </listener-class>
+	</listener>
+
 	<context-param>
 		<param-name>contextConfigLocation</param-name>
 		<param-value>
-			/WEB-INF/spring-security.xml,
-			/WEB-INF/mvc-dispatcher-servlet.xml
+			<!-- /WEB-INF/spring-security.xml, -->
+			/WEB-INF/database-config.xml
 		</param-value>
 	</context-param>
+
+	<filter>
+		<filter-name>CorsFilter</filter-name>
+		<filter-class>com.thetransactioncompany.cors.CORSFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>CorsFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
 		
 </web-app>

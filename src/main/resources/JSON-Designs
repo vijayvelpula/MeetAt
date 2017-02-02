@@ -1,0 +1,87 @@
+
+	>>>>>>>Save/Edit Location<<<<<<
+==========================================
+{
+  "id": 1,
+  "name": "Waverock",
+  "addressLine1": "Nanakramguda, Gachibowli",
+  "addressLine2": "Hyderabad",
+  "addressLine3": "Telangana, India",
+  "pincode": 500001
+}
+
+	>>>>>>>Save/Edit Conference Room<<<<<<
+==========================================
+{
+  "id": 1,
+  "locationId": 1,
+  "name": "C-1",
+  "capacity": 20,
+  "description": "1 Floor, Near HR Cabin"
+}
+
+	>>>>>>>Save/Edit Event<<<<<<
+==========================================
+{
+  "id": 34,
+  "roomId": 3,
+  "locationId": 1,
+  "createdUserId": 1,
+  "name": "Meeting with Client-A",
+  "owner": "XYZ",
+  "attendees": [
+    "abc@mail.com",
+    "def@mail.com",
+    "ghi@gmail.com"
+  ],
+  "recurrenceType": "Daily",
+  "startTimeId": 2,
+  "endTimeId": 4,
+  "startDate": "01-02-2016",
+  "lastOccurrence": "02-06-2016",
+  "endDate": "01-06-2016",
+  "description": "Planning to discuss about Design and Architecture",
+  "isActive": true
+}
+
+	>>>>>>>Get The Schedule<<<<<<
+==========================================
+[
+  {
+    "room": "C-1",
+    "booking_info": [
+      {
+        "timeChunkId": 1,
+        "isAvailable": true
+      },
+      {
+        "timeChunkId": 2,
+        "isAvailable": false,
+        "length": 4,
+        "event": {
+          "name":"Meeting with ClientA",
+          "owner":"XYZ"
+        }
+      },
+      {
+        "timeChunkId": 6,
+        "isAvailable": true
+      },
+      {
+        "timeChunkId": 7,
+        "isAvailable": true
+      },
+      {
+        "timeChunkId": 8,
+        "isAvailable": true
+      }
+    ]
+  }
+]
+
+For Updated Designs:
+--------------------
+Get Schedule: http://www.jsoneditoronline.org/?id=20cc68ed0630ea20f7e333a8d924ebeb
+EventDetails: http://jsoneditoronline.org/?id=bb7314dc1b58e682afed296a413e6155
+RoomDetails: http://jsoneditoronline.org/?id=20cc68ed0630ea20f7e333a8d9266a96
+LocationDetails: http://jsoneditoronline.org/?id=980c8b5e32ffdc51ff40f869acf1bafd

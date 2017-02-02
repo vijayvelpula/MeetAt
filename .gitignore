@@ -1,0 +1,8 @@
+/target/
+
+*.prefs
+*.jsdtscope
+*.classpath
+*.lock
+*.log
+.metadata/.mylyn/repositories.xml.zip
