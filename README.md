@@ -1,2 +1,2 @@
 # MeetAt
-A web-app for booking and scheduling meeting rooms.
+A Web Application for booking and scheduling meeting rooms.
