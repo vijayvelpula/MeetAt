@@ -1,0 +1,8 @@
+title: MeetAt
+description: A web-app for booking and scheduling meeting rooms.
+google_analytics: 
+show_downloads: true
+theme: jekyll-theme-cayman
+
+gems:
+  - jekyll-mentions
